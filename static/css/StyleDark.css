@@ -1,0 +1,26 @@
+body {
+    background-color: #222222;
+}
+h1, h2, h3, h4, h5, h6, p{
+    color:white;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 60%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    background-color:#333333;
+    color:white
+}
+
+a {
+    color: antiquewhite;
+    text-decoration: none;
+    margin-left: 20px;
+    margin-right: 20px;
+}

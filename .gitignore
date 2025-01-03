@@ -1,0 +1,4 @@
+venv/
+.idea/
+static/.idea
+SmartTest.iml
