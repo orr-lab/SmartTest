@@ -1,4 +1,4 @@
-SUPPORTED_FILE_EXTENSIONS = [".txt", ".py"]
+SUPPORTED_FILE_EXTENSIONS = [".py"]
 
 function supported(fileName){
     allowed = false
