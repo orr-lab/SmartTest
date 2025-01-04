@@ -18,7 +18,7 @@ def file_to_array(files):
 
     for file in files:
         if not is_file_supported(file.filename):
-            raise FileProcessingException("Unsupported file format")
+            continue
 
 
 
@@ -29,4 +29,5 @@ def file_to_array(files):
 
 
     # Pass the array of file data to the chatbot for processing
+    print(len(file_data))
     return chatgpt.generate_test(file_data)

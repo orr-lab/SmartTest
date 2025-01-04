@@ -1,5 +1,19 @@
 SUPPORTED_FILE_EXTENSIONS = [".txt", ".py"]
+
+function supported(fileName){
+    allowed = false
+    for( var i = 0; i < SUPPORTED_FILE_EXTENSIONS.length; i++){
+        if (fileName.endsWith(SUPPORTED_FILE_EXTENSIONS[i])){
+            return true;
+        }
+    }
+    return false;
+
+}
+
 async function upload() {
+
+
     const fileInput = document.getElementById("file");
     const files = fileInput.files;
 
@@ -10,7 +24,9 @@ async function upload() {
 
     const formData = new FormData();
     for (const file of files) {
-        formData.append("files", file);
+        if(supported(file.name)){
+            formData.append("files", file);
+        }
     }
 
     try {

@@ -11,7 +11,7 @@ Write a unit test for this code:
 ```
 """
 
-def generate_test(input_code: str) -> str:
+def generate_test(input_code: list) -> str:
     # Mock response
-    return input_code
+    return str(input_code)
 
