@@ -33,7 +33,7 @@ file: {filename}
 ```
 """
 
-    output += "Output only code, without any explenation."
+    output += "Output only code, without any explanation. Add comments explaining the code"
     return output
 
 def process_llm_response(llm_response: str) -> LlmTestResponse:
