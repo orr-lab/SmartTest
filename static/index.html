@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="static/css/StyleDark.css">
     <link rel="stylesheet" href="static/css/prism/prism.css">
 </head>
-<body>
+<body data-prismjs-copy-timeout="1000">
     <h1>Upload TXT and PY Files</h1>
 
 <!-- File Input -->
@@ -15,7 +15,7 @@
     <input type="button" value="Upload" onclick="upload()"> <br/>
 
 
-    <pre id="code" style="display:none;"><code class="language-python" id="out"></code></pre>
+    <pre id="code" style="display:none; "> <code class="language-python" id="out" data-prismjs-copy="Copy"></code></pre>
 
 
     <script src="static/JS/upload.js" defer></script>
