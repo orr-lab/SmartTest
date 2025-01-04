@@ -2,20 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload TXT and PY Files</title>
     <link rel="stylesheet" href="static/css/StyleDark.css">
     <link rel="stylesheet" href="static/css/prism/prism.css">
-
-
-
-
-
 </head>
 <body>
-    <h1 id="test">Upload TXT files</h1>
-    <input type="file" id="file" name="fileInput" accept=".txt,.py" />
+    <h1>Upload TXT and PY Files</h1>
+
+<!-- File Input -->
+    <input type="file" id="file" name="fileInput" accept=".txt,.py" multiple />
     <input type="button" value="Upload" onclick="upload()"> <br/>
-    <pre style="display:none" id="code"><code class="language-Python" id="out" ></code></pre>
+
+
+    <pre id="code" style="display:none;"><code class="language-python" id="out"></code></pre>
+
 
     <script src="static/JS/upload.js" defer></script>
     <script src="static/css/prism/prism.js"></script>
