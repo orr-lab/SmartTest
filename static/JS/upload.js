@@ -1,4 +1,4 @@
-SUPPORTED_FILE_EXTENSIONS = [".txt", ".py"]
+SUPPORTED_FILE_EXTENSIONS = [".py"]
 
 function supported(fileName){
     allowed = false
@@ -18,14 +18,18 @@ async function upload() {
     const files = fileInput.files;
     const loadingIndicator = document.getElementById('loading');
     const responseDiv = document.getElementById('code');
+    const fileSelect = document.getElementById('send');
 
-    loadingIndicator.style.display = 'block';
-    responseDiv.style.display = 'none';
+
 
     if (files.length === 0) {
         alert("Please select files before uploading.");
         return;
     }
+
+    loadingIndicator.style.display = 'block';
+    responseDiv.style.display = 'none';
+    fileSelect.style.display = 'none';
 
     const formData = new FormData();
     for (const file of files) {
@@ -46,13 +50,19 @@ async function upload() {
                 document.getElementById('code').style.display = 'block';
                 Prism.highlightAll();
                 loadingIndicator.style.display = 'none';
+                fileSelect.style.display = 'block';
+                fileInput.value = "";
             } else {
                 const error = await response.json();
                 alert(`Error: ${error.error}`);
+                loadingIndicator.style.display = 'none';
+                fileSelect.style.display = 'block';
             }
         } catch (error) {
             console.error('Error uploading file:', error);
             alert('Something went wrong. Check the console for details.');
+            loadingIndicator.style.display = 'none';
+            fileSelect.style.display = 'block';
         }
 
 

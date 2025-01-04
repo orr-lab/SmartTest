@@ -19,10 +19,11 @@ td, th {
 }
 
 a {
-    color: antiquewhite;
     text-decoration: none;
-    margin-left: 20px;
-    margin-right: 20px;
+    color: #67cdcc;
+}
+a:visited {
+    color: #0077EE;
 }
 label{
     color: white;
@@ -42,3 +43,10 @@ input[type=submit], input[type=reset] {
     margin: 4px 2px;
     cursor: pointer;
 }
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+

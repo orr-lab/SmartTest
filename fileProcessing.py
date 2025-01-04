@@ -3,7 +3,7 @@ from chatgpt import chatgpt
 class FileProcessingException(Exception):
     pass
 
-SUPPORTED_FILE_EXTENSIONS = [".txt", ".py"]
+SUPPORTED_FILE_EXTENSIONS = [".py"]
 
 def is_file_supported(file_name):
     """Check if a file has a supported extension."""
