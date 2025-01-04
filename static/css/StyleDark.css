@@ -24,3 +24,21 @@ a {
     margin-left: 20px;
     margin-right: 20px;
 }
+label{
+    color: white;
+}
+input{
+    background-color: #444444;
+    color: white;
+    border: 1px solid black;
+}
+input:hover{
+    background-color: #555555;
+}
+input[type=submit], input[type=reset] {
+    border: none;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
