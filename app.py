@@ -1,6 +1,4 @@
 from flask import Flask, send_from_directory, jsonify, request
-from chatgpt import chatgpt
-import fileProcessing
 from fileProcessing import file_to_string
 
 app = Flask(__name__)
@@ -18,15 +16,13 @@ def upload_file():
     if file.filename == '':
         return jsonify({"error": "No selected file"}), 400
 
-    if file and file.filename.endswith('.txt'):
-        try:
-            project_code = file_to_string(file)
-            result = chatgpt.generate_test(project_code)
-            return jsonify({"message": result})
-        except Exception as e:
-            return jsonify({"error": str(e)}), 500
-    else:
-        return jsonify({"error": "Only .txt files are allowed"}), 400
+
+    try:
+        result = file_to_string(file)
+        return jsonify({"message": result})
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
 
 
 

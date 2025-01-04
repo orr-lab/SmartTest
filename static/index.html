@@ -4,13 +4,20 @@
     <meta charset="UTF-8">
     <title>Test</title>
     <link rel="stylesheet" href="static/css/StyleDark.css">
+    <link rel="stylesheet" href="static/css/prism/prism.css">
+
+
+
+
 
 </head>
 <body>
     <h1 id="test">Upload TXT files</h1>
-    <input type="file" id="file" name="fileInput" accept=".txt" required>
-    <input type="button" value="Upload" onclick="upload()">
+    <input type="file" id="file" name="fileInput" accept=".txt,.py" />
+    <input type="button" value="Upload" onclick="upload()"> <br/>
+    <pre style="display:none" id="code"><code class="language-Python" id="out" ></code></pre>
 
     <script src="static/JS/upload.js" defer></script>
+    <script src="static/css/prism/prism.js"></script>
 </body>
 </html>
