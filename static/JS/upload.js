@@ -16,6 +16,11 @@ async function upload() {
 
     const fileInput = document.getElementById("file");
     const files = fileInput.files;
+    const loadingIndicator = document.getElementById('loading');
+    const responseDiv = document.getElementById('code');
+
+    loadingIndicator.style.display = 'block';
+    responseDiv.style.display = 'none';
 
     if (files.length === 0) {
         alert("Please select files before uploading.");
@@ -40,6 +45,7 @@ async function upload() {
                 document.getElementById('out').innerHTML = result.message;
                 document.getElementById('code').style.display = 'block';
                 Prism.highlightAll();
+                loadingIndicator.style.display = 'none';
             } else {
                 const error = await response.json();
                 alert(`Error: ${error.error}`);
