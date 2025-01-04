@@ -13,5 +13,5 @@ Write a unit test for this code:
 
 def generate_test(input_code: str) -> str:
     # Mock response
-    return "run_test()"
+    return input_code
 

@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <title>Test</title>
     <link rel="stylesheet" href="static/css/StyleDark.css">
-    <script src="static/JS/script.js"></script>
+
 </head>
 <body>
-  <h1 id="test">Test</h1>
-  <button onclick="test()">Test</button>
+    <h1 id="test">Upload TXT files</h1>
+    <input type="file" id="file" name="fileInput" accept=".txt" required>
+    <input type="button" value="Upload" onclick="upload()">
+
+    <script src="static/JS/upload.js" defer></script>
 </body>
 </html>
