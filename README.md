@@ -1,5 +1,5 @@
 ## Smart Test
-Smart Test lets you upload your code and automatically generates unit tests for it. After understanding how every one of the components interact.
+Smart Test lets you upload your code and automatically generates unit tests for it after understanding how every one of the components interact.
 
 [Hackathon Entry](https://devpost.com/software/smart-test)
 
